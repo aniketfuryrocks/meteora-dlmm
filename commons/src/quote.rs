@@ -186,8 +186,6 @@ pub fn quote_exact_in(
     let mut amount_left = transfer_fee_excluded_amount_in;
 
     while amount_left > 0 {
-        println!("while looping");
-
         let active_bin_array_pubkey = get_bin_array_pubkeys_for_swap(
             lb_pair_pubkey,
             &lb_pair,
@@ -198,7 +196,6 @@ pub fn quote_exact_in(
         .pop();
 
         let Some(active_bin_array_pubkey) = active_bin_array_pubkey else {
-            println!("Pool out of liquidity amount_left: {}", amount_left);
             break;
         };
 
@@ -208,7 +205,6 @@ pub fn quote_exact_in(
             .context("Active bin array not found")?;
 
         if !active_bin_array.is_bin_id_within_range(lb_pair.active_id)? || amount_in == 0 {
-            println!("breaking");
             break;
         }
 
