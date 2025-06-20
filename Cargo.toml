@@ -1,5 +1,5 @@
 [workspace]
-members = ["cli", "commons", "dlmm_interface"]
+members = ["commons", "dlmm_interface"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -7,10 +7,11 @@ anchor-lang = "0.29.0"
 anchor-spl = "0.29.0"
 anchor-client = "0.29.0"
 
+solana-program = "1.18.26"
 solana-sdk = "1.18.26"
-spl-associated-token-account = "2.2.0"
 solana-transaction-status = "1.18.26"
 solana-account-decoder = "1.18.26"
+spl-associated-token-account = "2.2.0"
 spl-memo = "3.0.0"
 spl-transfer-hook-interface = "0.5.0"
 
@@ -20,46 +21,18 @@ bincode = "1.3.3"
 bs58 = "0.5.0"
 bytemuck = "1.13.1"
 
-clap = "4.3.3"
-shellexpand = "3.1.0"
-
-env_logger = "0.9.0"
-log = "0.4.17"
-
 rust_decimal = "1.31.0"
 ruint = "1.3.0"
 num-integer = "0.1.45"
 num-traits = "0.2.16"
 
-hyper = "0.14.17"
-routerify = "3"
-
 tokio = "^1.0"
 futures-util = "0.3.0"
 async-trait = "0.1.0"
 
-anyhow = "1.0.71"
-
-rand = "0.8.5"
-
-chrono = "0.4.31"
-
-ureq = "2.0.0"
-
-itertools = "0.10.0"
-
+anyhow = "1.0.98"
 commons = { path = "./commons" }
 
 [patch.crates-io.base64ct]
 git = "https://github.com/RustCrypto/formats"
 rev = "230a7ab3897ad8658d4d6ffb8d324bda641eb83d" # 1.7.3
-
-[profile.release]
-overflow-checks = true
-lto = "fat"
-codegen-units = 1
-
-[profile.release.build-override]
-opt-level = 3
-incremental = false
-codegen-units = 1

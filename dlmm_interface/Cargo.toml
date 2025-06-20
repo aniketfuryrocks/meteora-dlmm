@@ -11,20 +11,20 @@ version = "^1.5"
 
 [dependencies.bytemuck]
 features = ["derive", "min_const_generics"]
-version = "^1.16"
+workspace = true
 
 [dependencies.num-derive]
 version = "0.4.2"
 
 [dependencies.num-traits]
-version = "^0.2"
+workspace = true
 
 [dependencies.serde]
 optional = true
-version = "^1.0"
+workspace = true
 
 [dependencies.solana-program]
-version = "^1.16"
+workspace = true
 
 [dependencies.thiserror]
 version = "^1.0"

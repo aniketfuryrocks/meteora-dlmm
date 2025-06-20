@@ -15,13 +15,9 @@ commons = { workspace = true }
 anchor-lang = { workspace = true }
 anchor-spl = { workspace = true }
 anchor-client = { workspace = true, features = ["async"] }
-clap = { workspace = true, features = ["derive"] }
-anyhow = { workspace = true }
-shellexpand = { workspace = true }
 rust_decimal = { workspace = true, features = ["maths"] }
 dlmm_interface = { path = "../dlmm_interface" }
 spl-associated-token-account = { workspace = true }
-rand = { workspace = true }
 tokio = { workspace = true, features = ["full", "parking_lot"] }
 bincode = { workspace = true }
 spl-memo = { workspace = true, features = ["no-entrypoint"] }
@@ -30,6 +26,12 @@ solana-account-decoder = { workspace = true }
 num-integer = { workspace = true }
 bytemuck = { workspace = true }
 futures-util = { workspace = true }
+
+anyhow = "1.0.71"
+rand = "0.9.1"
+
+clap = "4.3.3"
+shellexpand = "3.1.0"
 
 bigdecimal = "0.4.2"
 serde = "1.0.167"
