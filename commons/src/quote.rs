@@ -156,7 +156,7 @@ pub fn quote_exact_in(
     lb_pair: &LbPair,
     amount_in: u64,
     swap_for_y: bool,
-    bin_arrays: HashMap<Pubkey, BinArray>,
+    bin_arrays: &HashMap<Pubkey, BinArray>,
     bitmap_extension: Option<&BinArrayBitmapExtension>,
     clock: &Clock,
     mint_x_account: &Account,
