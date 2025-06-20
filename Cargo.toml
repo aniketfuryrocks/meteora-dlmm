@@ -50,6 +50,10 @@ itertools = "0.10.0"
 
 commons = { path = "./commons" }
 
+[patch.crates-io.base64ct]
+git = "https://github.com/RustCrypto/formats"
+rev = "230a7ab3897ad8658d4d6ffb8d324bda641eb83d" # 1.7.3
+
 [profile.release]
 overflow-checks = true
 lto = "fat"
